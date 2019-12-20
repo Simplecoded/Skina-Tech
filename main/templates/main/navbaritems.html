@@ -8,6 +8,12 @@
         
         {% if user.is_authenticated %}
         <li class="nav-item">
+          <a class="nav-link" href="/categorias">categorias</a></li>        
+        <li class="nav-item">
+          <a class="nav-link" href="/subcategorias">subcategorias</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="/productos">productos</a></li>
+        <li class="nav-item">
           <a class="nav-link" href="/account">{{user.username|title}} - Account</a>
         </li>
         <li class="nav-item">

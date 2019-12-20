@@ -1,0 +1,21 @@
+{% extends "main/header.html" %}
+
+
+{% block content %}
+
+<div class="container">
+Productos</div>
+
+<br>
+{% for Producto in Productos %}
+
+
+        <h3>{{Producto.nombre}}</h3>
+          <p>Categoría: {{Producto.categoria}}</p>
+          <p>Subcategoría: {{Producto.subcategoria}}</p>
+          
+          
+
+{% endfor %}
+
+{% endblock %}
