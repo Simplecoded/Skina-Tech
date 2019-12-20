@@ -1,0 +1,53 @@
+<!-- Header y footer -->
+
+<head>
+{% load static %}
+{# Load the tag library #}
+{% load bootstrap4 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+  <link href="{% static 'tinymce/css/prism.css'%}" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+   <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
+   <!-- Compiled and minified JavaScript -->
+   <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>-->
+</head>
+
+<body>
+
+  {% include 'main/messaging.html' %}
+
+  {% include 'main/navbaritems.html' %}
+	<div class="container">
+		<br>
+	{% block content %}
+	{% endblock %}
+	</div>
+
+	<br><br>
+	<!-- Footer -->
+  <body class="d-flex flex-column">
+  <!--  <div id="page-content">
+      <div class="container text-center">
+        <div class="row justify-content-center">
+          <div class="col-md-7">
+            <h1 class="font-weight-light mt-4 text-white">Sticky Footer using Flexbox</h1>
+            <p class="lead text-white-50">Use just two Bootstrap 4 utility classes and three custom CSS rules and you will have a flexbox enabled sticky footer for your website!</p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+      <div class="container text-center">
+        <small>Copyright &copy; Skina Tech - Sistema de inventarios</small>
+      </div>
+    </footer>
+  </body>
+</body>
+
+<script src="{%static 'tinymce/js/prism.js/prism.js'%}"></script>
